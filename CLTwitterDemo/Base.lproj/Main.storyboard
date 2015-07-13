@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ysS-Hy-R6f">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Tweet Image/Video-->
+        <scene sceneID="1wP-SW-SO3">
+            <objects>
+                <viewController id="Ig9-Nk-EJD" customClass="FirstViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Uny-Ta-M9K"/>
+                        <viewControllerLayoutGuide type="bottom" id="505-PA-v5n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2kS-xn-KHk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLA-YR-t5A">
+                                <rect key="frame" x="80" y="60" width="120" height="30"/>
+                                <state key="normal" title="Tweet with Image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tweetImage:" destination="Ig9-Nk-EJD" eventType="touchUpInside" id="CE9-vX-usu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-Tm-PoQ">
+                                <rect key="frame" x="80" y="174" width="116" height="30"/>
+                                <state key="normal" title="Tweet with Video">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tweetVideo:" destination="Ig9-Nk-EJD" eventType="touchUpInside" id="JfN-W8-vNa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWU-Ba-Brb">
+                                <rect key="frame" x="80" y="116" width="98" height="30"/>
+                                <state key="normal" title="Capture Video">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="captureVideo:" destination="Ig9-Nk-EJD" eventType="touchUpInside" id="UFm-o6-hY7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tweet Image/Video" image="first" id="iqt-b9-w8u"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a9U-YK-JLk" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--Timeline-->
+        <scene sceneID="knT-Oh-cw9">
+            <objects>
+                <navigationController id="Aku-we-HcQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Timeline" id="syc-RX-ZyM"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gbc-Po-cvJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="10K-T7-g6s" kind="relationship" relationship="rootViewController" id="p48-As-rjt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="42V-j0-3bm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="353"/>
+        </scene>
+        <!--Second-->
+        <scene sceneID="TB1-zv-z1C">
+            <objects>
+                <viewController id="10K-T7-g6s" customClass="FABUserTimelineViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cdf-Sp-u8c"/>
+                        <viewControllerLayoutGuide type="bottom" id="vo3-4u-Uc7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zzb-3R-6N3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6hX-n5-FJT">
+                                <rect key="frame" x="195" y="279" width="209.5" height="41.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIU-W0-gxr">
+                                <rect key="frame" x="192" y="329" width="215.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="6hX-n5-FJT" secondAttribute="centerX" id="QRh-Ud-Wzv"/>
+                            <constraint firstItem="vIU-W0-gxr" firstAttribute="top" secondItem="6hX-n5-FJT" secondAttribute="bottom" constant="8" symbolic="YES" id="S7i-DU-S7j"/>
+                            <constraint firstItem="vIU-W0-gxr" firstAttribute="centerX" secondItem="6hX-n5-FJT" secondAttribute="centerX" id="uZu-xc-HwX"/>
+                            <constraint firstAttribute="centerY" secondItem="6hX-n5-FJT" secondAttribute="centerY" id="zoy-df-OYD"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Second" image="second" id="N9x-4t-fL4"/>
+                    <navigationItem key="navigationItem" id="LUd-Q5-n1a"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sod-bs-a7e" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1488" y="353"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="LWZ-hK-50m">
+            <objects>
+                <tabBarController id="ysS-Hy-R6f" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="wDs-mL-lvA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ig9-Nk-EJD" kind="relationship" relationship="viewControllers" id="ncY-Za-fDD"/>
+                        <segue destination="Aku-we-HcQ" kind="relationship" relationship="viewControllers" id="y22-DB-vpX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ymB-hA-1RG" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>
